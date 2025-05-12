@@ -28,7 +28,7 @@ pipeline {
         stage("build image") {
             steps {
                 script {
-                    buildImage 'samsonojo/demo-app:3.0'                    
+                    buildImage 'samsonojo/demo-app:jma-3.0'                    
                 }
             }
         }
