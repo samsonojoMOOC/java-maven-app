@@ -17,7 +17,7 @@ pipeline {
                 }
             }
         }
-        stage("build jar") {
+        stage("building jar") {
             steps {
                 script {
                     buildJar()
@@ -25,12 +25,12 @@ pipeline {
             }
         }
 
-        stage("build and push image") {
+        stage("building and pushing image") {
             steps {
                 script {
-                    buildImage 'samsonojo/demo-app:jma-3.0'
+                    buildImage 'samsonojo/demo-app:jma-3.3'
                     dockerLogin()
-                    dockerPush 'samsonojo/demo-app:jma-3.0'
+                    dockerPush 'samsonojo/demo-app:jma-3.3'
                 }
             }
         }
